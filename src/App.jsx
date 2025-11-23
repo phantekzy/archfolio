@@ -1,4 +1,5 @@
 /* Import section */
+import { Dock } from "./components/Dock"
 import { Navbar } from "./components/Navbar"
 
 /* App component section */
@@ -7,6 +8,8 @@ function App() {
         <main>
             {/* Navigation bar section */}
             <Navbar />
+            {/* Dock section */}
+            <Dock />
         </main>
     )
 }

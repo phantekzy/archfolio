@@ -26,7 +26,7 @@ export function Navbar() {
                                 <p
                                     className={
                                         `${currentDir === `~/${name.toLowerCase()}`
-                                            ? "text-green-200"
+                                            ? "text-black/50 scale-120"
                                             : "text-black"
                                         }`
                                     }
