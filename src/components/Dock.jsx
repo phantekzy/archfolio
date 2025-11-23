@@ -4,8 +4,11 @@ import { useRef } from "react"
 import { dockApps } from "../constants"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
+import { useWindowStore } from "../store/window"
 /* Dock component */
 export function Dock() {
+    /* Store */
+    const { openWindow, closeWindow, windows } = useWindowStore()
     /* useRef */
     const dockRef = useRef(null)
     /* GSAP section */
@@ -53,10 +56,20 @@ export function Dock() {
         }
     }, [])
 
-
     /* Toggle apps */
     const toggleApp = (app) => {
         /* Open windows */
+        if (!app.canOpen) return
+        const window = windows[app.id]
+        if (!window) {
+            console.error(`CAN NOT FIND THE APP WINDOW : ${app.id}`)
+            return
+        }
+        if (window.isOpen) {
+            closeWindow(app.id)
+        } else {
+            openWindow(app.id)
+        }
     }
     return (
         <section id='dock'>
@@ -82,7 +95,7 @@ export function Dock() {
                             <img
                                 src={`/images/${icon}`}
                                 loading="lazy"
-                                className={canOpen ? " " : "opacity-60"}
+                                className={canOpen ? " " : "opacity-50"}
                             />
                         </button>
                     </div>
