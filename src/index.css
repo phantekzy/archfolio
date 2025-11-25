@@ -7,7 +7,7 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("/images/wallpaper2.jpeg");
+  background-image: url("/images/wallpaper3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -37,7 +37,7 @@ body {
   }
 
   nav {
-    @apply relative bg-black/20  backdrop-blur-md flex mx-auto justify-between items-center p-2 px-5 select-none;
+    @apply relative bg-black/35  backdrop-blur-lg flex mx-auto justify-between items-center p-2 px-5 select-none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 
     div {
@@ -71,7 +71,7 @@ body {
     @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none max-sm:hidden;
 
     .dock-container {
-      @apply bg-black/60 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-2;
+      @apply bg-black/45 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-2;
     }
 
     .tooltip {
@@ -168,7 +168,7 @@ body {
         @apply bg-transparent;
       }
       &::-webkit-scrollbar-thumb {
-        @apply bg-black rounded-full;
+        @apply bg-black/40 rounded-full;
       }
     }
   }

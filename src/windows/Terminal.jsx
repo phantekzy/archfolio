@@ -71,7 +71,7 @@ const Terminal = () => {
                 ...output
             ]);
 
-            setPendingCommand("projects"); // now the terminal waits for user input
+            setPendingCommand("projects");
 
         } catch (error) {
             setLinesState(prev => [...prev, `Error fetching GitHub repos: ${error.message}`]);
@@ -172,6 +172,7 @@ const Terminal = () => {
         if (cmd === "contact") {
             setLinesState(prev => [...prev, newLine, ...contact]);
             setPendingCommand("contact");
+            setLinesState(prev => [...prev, '[type a number once , if failed rewrite contact again]'])
             setInput("");
             return;
         }
@@ -208,7 +209,7 @@ const Terminal = () => {
     return (
         <>
             {/* Header */}
-            <div id="window-header" className="bg-black text-white flex items-center justify-between p-2">
+            <div id="window-header" className="bg-black/20 text-white flex items-center justify-between p-2">
                 <WindowControls target="terminal" />
                 <h2>Terminal</h2>
             </div>
@@ -228,7 +229,7 @@ const Terminal = () => {
                     <div className="flex items-center">
                         <span className="text-white mr-1">
                             [
-                            <span className="text-transparent bg-linear-to-r from-blue-600 via-pink-400 to-red-500 bg-clip-text">
+                            <span className="text-transparent bg-linear-to-r from-purple-600 via-pink-400 to-red-500 bg-clip-text">
                                 phantekzy
                             </span>
                             @archlinux ~]$
