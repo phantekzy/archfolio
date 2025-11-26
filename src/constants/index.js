@@ -2,7 +2,7 @@ const navLinks = [
   {
     id: 1,
     name: "Projects",
-    type: "finder",
+    type: "projects",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const navIcons = [
 
 const dockApps = [
   {
-    id: "finder",
+    id: "projects",
     name: "Portfolio", // was "Finder"
     icon: "finder.png",
     canOpen: true,
@@ -493,7 +493,7 @@ export const locations = {
 const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
-  finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  projects: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   firefox: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },

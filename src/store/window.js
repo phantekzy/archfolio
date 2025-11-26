@@ -8,6 +8,7 @@ export const useWindowStore = create(
   immer((set) => ({
     windows: WINDOW_CONFIG,
     nextZIndex: INITIAL_Z_INDEX + 1,
+    focusedWindow: null,
 
     openWindow: (windowKey, data = null) =>
       set((state) => {
@@ -17,6 +18,7 @@ export const useWindowStore = create(
         win.zIndex = state.nextZIndex;
         win.data = data ?? win.data;
         state.nextZIndex++;
+        state.focusedWindow = windowKey;
       }),
 
     closeWindow: (windowKey) =>
@@ -26,11 +28,13 @@ export const useWindowStore = create(
         win.isOpen = false;
         win.zIndex = INITIAL_Z_INDEX;
         win.data = null;
+        if (state.focusedWindow === windowKey) state.focusedWindow = null;
       }),
     focusWindow: (windowKey) =>
       set((state) => {
         const win = state.windows[windowKey];
         win.zIndex = state.nextZIndex++;
+        state.focusedWindow = windowKey;
       }),
   })),
 );

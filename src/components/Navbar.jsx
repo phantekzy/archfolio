@@ -1,13 +1,15 @@
 /* Import section */
-import { useState } from "react";
 import { navIcons, navLinks } from "../constants";
 import dayjs from "dayjs";
 import { useMediaQuery } from "react-responsive";
+import { useWindowStore } from "../store/window";
 /* Navbar component */
 export function Navbar() {
     /* useState */
-    const [currentDir, setCurrentDir] = useState('~')
     const isMobile = useMediaQuery({ query: '(max-width : 1024px)' })
+    const { openWindow, focusedWindow } = useWindowStore()
+    const currentDir = focusedWindow ? `~/${focusedWindow}` : "~";
+
     return (
         <nav>
             <div>
@@ -15,27 +17,28 @@ export function Navbar() {
                 <img
                     src="/archblack.png"
                     className="h-5 w-5"
-                    onClick={() => setCurrentDir("~")}
                 />
-                <p className="font-bold text-black text-xs">{currentDir}</p>
+                <p className="font-bold text-white/70 text-xs">{currentDir}</p>
+
+
                 {/* Mapping on data */}
                 <ul>
                     {
-                        navLinks.map(({ id, name }) => (
-                            <li key={id}>
+                        navLinks.map(({ id, name, type }) => (
+                            <li
+                                key={id}
+                                onClick={() => openWindow(type)}
+                            >
                                 <p
-                                    className={
-                                        `${currentDir === `~/${name.toLowerCase()}`
-                                            ? "text-black/50 scale-120"
-                                            : "text-black"
-                                        }`
-                                    }
-                                    onClick={() => setCurrentDir(`~/${name.toLowerCase()}`)}
+                                    className={`${focusedWindow === type ? "text-black/50 scale-120" : "text-black"}`}
+
                                 >{name}</p>
                             </li>
                         ))
                     }
                 </ul>
+
+
                 {/* Date and time */}
                 <time>
                     {isMobile
@@ -44,7 +47,9 @@ export function Navbar() {
                     }
                 </time>
             </div>
-            {/* Navigation icons */}
+
+
+            {/* OS icons */}
             <div>
                 <ul>
                     {navIcons.map(({ id, img }) => (

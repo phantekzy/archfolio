@@ -108,7 +108,7 @@ body {
   }
 
   #firefox {
-    @apply absolute top-32 left-1/12 w-[50%] h-[70vh] bg-black/40 backdrop-blur-lg shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
+    @apply absolute top-32 left-3/12 w-[50%] h-[70vh] bg-black/40 backdrop-blur-lg shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
 
     .search {
       @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2;
@@ -262,7 +262,7 @@ body {
   }
 
   #resume {
-    @apply w-fit h-fit absolute top-16 left-7/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-fit h-fit absolute top-16 left-7/12 bg-black/40 backdrop-blur-lg shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     #window-header {
       h2 {
