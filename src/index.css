@@ -7,7 +7,7 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("/images/wallpaper3.jpg");
+  background-image: url("/images/wallpaper.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -37,7 +37,7 @@ body {
   }
 
   nav {
-    @apply relative bg-black/35  backdrop-blur-lg flex mx-auto justify-between items-center p-2 px-5 select-none;
+    @apply relative bg-black/5  backdrop-blur-3xl flex mx-auto justify-between items-center p-2 px-5 select-none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 
     div {
@@ -71,7 +71,7 @@ body {
     @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none max-sm:hidden;
 
     .dock-container {
-      @apply bg-black/45 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-2;
+      @apply bg-white/5 backdrop-blur-3xl justify-between rounded-2xl p-1 flex items-end gap-2;
     }
 
     .tooltip {
@@ -104,11 +104,11 @@ body {
   }
 
   #window-header {
-    @apply flex items-center justify-between px-4 py-1.5 bg-black/30  select-none text-sm text-white font-bold;
+    @apply flex items-center justify-between px-4 py-1.5  select-none text-sm text-white font-bold;
   }
 
   #firefox {
-    @apply absolute top-32 left-3/12 w-[50%] h-[70vh] bg-black/40 backdrop-blur-lg shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
+    @apply absolute top-32 left-3/12 w-[50%] h-[70vh] bg-black/5 backdrop-blur-3xl shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
 
     .search {
       @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2;
@@ -367,4 +367,19 @@ body {
   50% {
     opacity: 0;
   }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
 }

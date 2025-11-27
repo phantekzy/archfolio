@@ -7,18 +7,23 @@ import TerminalWindow from "./windows/Terminal"
 import FirefoxWindow from "./windows/Firefox"
 import ResumeWindow from "./windows/Resume"
 import { useState } from "react"
-import { BootScreen } from "./BootScreen"
+import { LockScreen } from "./components/LockScreen"
+import { BootScreen } from "./components/BootScreen"
 
 /* GSAP Registre */
 gsap.registerPlugin(Draggable)
 
 /* App component section */
 function App() {
+    /* Boot screen */
     const [booted, setBooted] = useState(false)
+    const [unlocked, setunlocked] = useState(false)
     if (!booted) {
         return <BootScreen onFinish={() => setBooted(true)} />
     }
+    /* Lock screen */
 
+    if (!unlocked) return <LockScreen onUnlock={() => setunlocked(true)} />
 
     return (
         <main>
