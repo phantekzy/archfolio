@@ -56,7 +56,7 @@ export function LockScreen({ onUnlock }) {
 
                 {unlockedLayer && (
                     <div
-                        className="absolute bottom-52 bg-white/10 backdrop-blur-xl p-6 
+                        className="absolute bottom-60 bg-white/10 backdrop-blur-xl p-6 
                                    rounded-2xl w-80 text-center animate-slide-up"
                     >
                         <p className="text-lg mb-4">Enter any Password</p>
@@ -64,7 +64,6 @@ export function LockScreen({ onUnlock }) {
                         <input
                             ref={inputRef}
                             type="password"
-                            placeholder="Enter any password"
                             className="w-full px-3 py-2 rounded bg-black/10 
                                        text-white outline-none text-center"
                             onKeyDown={(e) => {
