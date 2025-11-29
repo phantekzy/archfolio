@@ -279,7 +279,7 @@ body {
     @apply absolute w-3xl left-40 top-20 shadow-2xl bg-black/55 text-white backdrop-blur-lg drop-shadow-2xl overflow-hidden rounded-xl;
 
     .sidebar {
-      @apply w-48 bg-black/60 border-r border-white flex flex-col p-5 space-y-3;
+      @apply w-48 bg-black/10 border-r border-black flex flex-col p-5 space-y-3;
 
       h3 {
         @apply text-xs font-medium text-gray-400 mb-1;
