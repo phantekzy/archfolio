@@ -4,7 +4,7 @@ import { immer } from "zustand/middleware/immer";
 import { locations } from "../constants";
 
 /* Default location */
-const DEFAULT_LOCATION = locations.work;
+const DEFAULT_LOCATION = locations.about;
 
 /* Location store */
 export const useLocationStore = create(
