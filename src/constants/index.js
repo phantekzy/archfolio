@@ -122,50 +122,22 @@ const socials = [
   },
 ];
 
-const photosLinks = [
-  {
-    id: 1,
-    icon: "/icons/gicon1.svg",
-    title: "Library",
-  },
-  {
-    id: 2,
-    icon: "/icons/gicon2.svg",
-    title: "Memories",
-  },
-  {
-    id: 3,
-    icon: "/icons/file.svg",
-    title: "Places",
-  },
-  {
-    id: 4,
-    icon: "/icons/gicon4.svg",
-    title: "People",
-  },
-  {
-    id: 5,
-    icon: "/icons/gicon5.svg",
-    title: "Favorites",
-  },
-];
-
 const gallery = [
   {
     id: 1,
-    img: "/images/gal1.png",
+    img: "/images/me2.jpg",
   },
   {
     id: 2,
-    img: "/images/gal2.png",
+    img: "/images/me3.jpg",
   },
   {
     id: 3,
-    img: "/images/gal3.png",
+    img: "/images/berserk.jpg",
   },
   {
     id: 4,
-    img: "/images/gal4.png",
+    img: "/images/berserk2.png",
   },
 ];
 
@@ -187,22 +159,6 @@ const ABOUT_LOCATION = {
   children: [
     {
       id: 1,
-      name: "picture.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      imageUrl: "/images/me2.jpg",
-    },
-    {
-      id: 2,
-      name: "picture1.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      imageUrl: "/images/me3.jpg",
-    },
-    {
-      id: 3,
       name: "picture2.png",
       icon: "/images/image.png",
       kind: "file",
@@ -211,7 +167,7 @@ const ABOUT_LOCATION = {
     },
 
     {
-      id: 4,
+      id: 2,
       name: "picture3.png",
       icon: "/images/image.png",
       kind: "file",
@@ -220,7 +176,7 @@ const ABOUT_LOCATION = {
     },
 
     {
-      id: 5,
+      id: 3,
       name: "about-me.txt",
       icon: "/images/txt.png",
       kind: "file",
@@ -379,7 +335,6 @@ export {
   dockApps,
   techStack,
   socials,
-  photosLinks,
   gallery,
   INITIAL_Z_INDEX,
   WINDOW_CONFIG,
