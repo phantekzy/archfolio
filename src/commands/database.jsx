@@ -32,7 +32,7 @@ const whoami = [
     " ",
     "─────────────────────[ WHOAMI ]─────────────────────",
     " My name is Maini Lotfi Abdelkader, known online as phantekzy.",
-    " I'm a junior full stack developer and a fully self-taught programmer",
+    " I'm a full stack developer and a fully self-taught programmer",
     " who started from nothing and kept fighting no matter how hard life hit.",
     " ",
     "─────────────────────[ BACKSTORY ]───────────────────",
